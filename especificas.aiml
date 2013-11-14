@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <aiml version="1.0">
+
+	<!-- ################### -->
+	<!-- ### Especificas ### -->
+	<!-- ################### -->
+	<category>
+		<pattern> * DOCUMENTO * </pattern>
+		<template><srai>DOCUMENTO</srai></template>
+	</category>
+	
+	<category>
+		<pattern> * DOCUMENTO </pattern>
+		<template><srai>DOCUMENTO</srai></template>
+	</category>
+	
+	<category>
+		<pattern>DOCUMENTO</pattern>
+		<template>
+			<random>
+				<li>Documento?? Possuo varios documentos. Qual procura?</li>
+				<li>Hum... Interessante. Que tipo de documento?</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> * DOCUMENTO * ECONOMIA</pattern>
+		<template>
+				Possuo algo referente a economia. Algum autor(a) em especifico?
+		</template>
+	</category>
+	
+	<category>
+		<pattern>* ECONOMIA</pattern>
+		<template>
+			<random>
+				<li>Possuo algo referente a economia. Algum autor(a) em especifico?</li>
+				<li>Hum... Referente a que assunto o documento?</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>ISSO *</pattern>
+		<that>E Marina Dutra Caldas?</that>
+		<template>Entendi. Mas infelizmente so tenho este documento: Atuacao do FMI no Contexto Internacional e os Emprestimos ao Brasil no Periodo 1994 a 2001. Esse que procura ?</template>
+	</category>
+	
+	<category>
+		<pattern>SIM</pattern>
+		<that>E Marina Dutra Caldas</that>
+		<template>Certo. Possuo somente este documento: Atuacao do FMI no Contexto Internacional e os Emprestimos ao Brasil no Periodo 1994 a 2001. Esse que procura ?</template>
+	</category> 
+	
+	<category>
+		<pattern>SIM</pattern>
+		<that>Certo. Possuo somente este documento: Atuacao do FMI no Contexto Internacional e os Emprestimos ao Brasil no Periodo 1994 a 2001. Esse que procura</that>
+		<template>Que bom, algo mais em que possa ajudar ?</template>
+	</category> 
+	
+	<category>
+		<pattern> * CONTEXTO INTERNACIONAL</pattern>
+		<template>Conhece o nome do autor?</template>
+	</category>
+	
+	<category>
+		<pattern>* FMI</pattern>
+		<template>Entendi... Sabe o nome do autor(a)?</template>
+	</category>
+	
+	<category>
+		<pattern>FMI *</pattern>
+		<template>Entendi... Sabe o nome do autor(a)?</template>
+	</category>
+	
+	<category>
+		<pattern>SIM</pattern>
+		<that>Possuo algo referente a economia. Algum autor(a) em especifico</that>
+		<template>Qual o nome dele(a)?</template>
+	</category>
+	
+	<category>
+		<pattern>MARIA * </pattern>
+		<template>E Marina Dutra Caldas?</template>
+	</category>
+	
+	<category>
+		<pattern>NAO</pattern>
+		<template>Que pena. Sabe o titulo do documento ou alguma palavra-chave?</template>
+	</category>
+	
+	<category>
+		<pattern>ABOUT</pattern>
+		<template>Possuo <size/> categorias e estou na versao <version/> </template>
+	</category>
+	
+</aiml>
