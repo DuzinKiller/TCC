@@ -1,0 +1,21 @@
+<aiml version="1.0">
+
+<category>
+<pattern>BOOTSTRAP</pattern>
+<template>
+Interpreter Version Info: <version/>
+Criador : Eduardo Roberto
+Projeto : BotHelper
+
+</template>
+</category>
+
+<!-- This category works with the Standard AIML Set -->
+<category>
+<pattern>LOAD</pattern>
+<template>
+<learn>tcc/*.aiml</learn>
+</template>
+</category>
+
+</aiml>
