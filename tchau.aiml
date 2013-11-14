@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <aiml version="1.0">
+
+	<category>		
+		<pattern>TCHAU *</pattern>
+		<template><srai>TCHAU</srai></template>
+	</category>
+	
+	<category>		
+		<pattern>OBRIGADO</pattern>
+		<template><srai>TCHAU</srai></template>
+	</category>
+	
+	
+	<category>		
+		<pattern>TCHAU</pattern>
+		<template>
+			<random>
+				<li>Tchau. Bom aproveito.</li>
+				<li>Tchau. Boa leitura.</li>
+				<li>Tchau. De nada e volte sempre.</li>
+			</random>
+		</template>
+	</category>
+</aiml>
