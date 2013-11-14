@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <aiml version="1.0">
+
+	<!-- ################ -->
+	<!-- ### Saudacao ### -->
+	<!-- ################ -->
+	<category>
+		<pattern>OI</pattern>
+		<template><srai>SAUDACAO</srai></template>
+	</category>
+	
+	<category>
+		<pattern>OLA</pattern>
+		<template><srai>SAUDACAO</srai></template>
+	</category>
+	
+	<category>
+		<pattern>TEM ALGUEM</pattern>
+		<template><srai>SAUDACAO</srai></template>
+	</category>
+	
+	<category>
+		<pattern>SAUDACAO</pattern>
+		<template>
+			<random>
+				<li>Ola, como esta?</li>
+				<li>Ola. O que deseja?</li>
+				<li>Ola. Tudo bem com voce?</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>		
+		<pattern> * E VOCE </pattern>
+		<template>Estou bem, obrigado. Em que posso ajudar ?</template>
+	</category>
+	
+	<category>		
+		<pattern>* E VOCE</pattern>
+		<that>Ola. Tudo bem com voce?</that>
+		<template>
+			<random>
+				<li>Estou bem, obrigado. O que estao procurando?</li>
+				<li>Estou bem. Quer conversar?</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>		
+		<pattern>NAO</pattern>
+		<that>Estou bem. Quer conversar</that>
+		<template>O que deseja entao?</template>
+	</category>
+	
+	<category>
+		<pattern>QUAL O SEU NOME</pattern>
+		<template>
+			<random>
+				<li>Muitos me chamam de BotHelper. Qual seu nome?</li>
+				<li>Meu nome e BotHelper, por causa que ajudo as pessoas a encontrar seus arquivos.</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>MEU NOME E *</pattern>
+		<template>Prazer em conhece-lo, <set name="nome"><star/></set>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>*</pattern>
+		<that>WHAT MAKES YOU SAY THAT</that>
+		<template>
+		<think><set name="it"><set name="topic"><person/></set></set></think>Interesting explanation.
+
+		</template>
+
+		</category>
+</aiml>
